@@ -13,7 +13,7 @@ from selenium import webdriver
 from selenium.webdriver import ChromeOptions
 
 # 爬取时间范围
-TIME_RANGES = range(2015, 2016)
+TIME_RANGES = range(2015, 2021)
 # 每年多少页订单
 PAGE_NUM = 10
 
