@@ -8,12 +8,12 @@ import requests
 from lxml import etree
 import datetime
 import bs4
-from pprint import pprint
 from selenium import webdriver
 from selenium.webdriver import ChromeOptions
+import pandas as pd
 
 # 爬取时间范围
-TIME_RANGES = range(2015, 2021)
+TIME_RANGES = range(2015, 2016)
 # 每年多少页订单
 PAGE_NUM = 10
 
@@ -83,6 +83,9 @@ class JSpider(object):
         file_path = os.path.join(self.data_dir, 'jd_orders.json')
         with open(file_path, 'w') as f:
             f.write(json.dumps(ret_list))
+        pdObj = pd.read_json('jd_orders.json')
+        pdObj.to_csv('jd_orders.csv', index=False, columns=['datetime', 'title', 'amount', 'id', 'img'])
+        os.system('rm jd_orders.json')
 
 
 class JDSpider():
