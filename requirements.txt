@@ -3,3 +3,4 @@ selenium==3.141.0
 lxml==4.3.3
 requests==2.22.0
 beautifulsoup4==4.9.1
+pandas==1.0.1
