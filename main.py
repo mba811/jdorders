@@ -13,7 +13,7 @@ from selenium.webdriver import ChromeOptions
 import pandas as pd
 
 # 爬取时间范围
-TIME_RANGES = range(2015, 2020)
+TIME_RANGES = range(2015, 2021)
 # 每年多少页订单
 PAGE_NUM = 10
 
